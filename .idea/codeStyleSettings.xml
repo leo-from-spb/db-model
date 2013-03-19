@@ -17,6 +17,9 @@
         </option>
         <option name="LINE_SEPARATOR" value="&#10;" />
         <option name="RIGHT_MARGIN" value="100" />
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
         <codeStyleSettings language="HTML">
           <indentOptions>
             <option name="TAB_SIZE" value="8" />
