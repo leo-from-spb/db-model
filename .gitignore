@@ -1,6 +1,17 @@
+out
+.idea/workspace.xml
+.idea/misc.xml
+*.iws
 *.class
-
-# Package Files #
 *.jar
 *.war
 *.ear
+*.zip
+*.rar
+*.exe
+*.lib
+*.obj
+*.pdb
+*.bin
+*.bak
+*.*.k
