@@ -1,6 +1,7 @@
 package jetbrains.dbmodel.oracle;
 
 import jetbrains.dbmodel.core.DbModel;
+import jetbrains.dbmodel.core.DbmColumn;
 import jetbrains.dbmodel.core.DbmSchema;
 import jetbrains.dbmodel.core.DbmTable;
 import org.jetbrains.annotations.NotNull;
@@ -16,4 +17,10 @@ public final class OraTable extends DbmTable
         super(schema);
     }
 
+
+    @Override
+    public DbmColumn createColumn()
+    {
+        return new DbmColumn(this);
+    }
 }

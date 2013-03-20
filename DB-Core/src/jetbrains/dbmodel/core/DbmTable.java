@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  *
  **/
-public class DbmTable extends DbmLikeTable
+public abstract class DbmTable extends DbmLikeTable
 {
 
     private TableOrganization organization;

@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  *
  **/
-public class DbmView extends DbmLikeTable
+public abstract class DbmView extends DbmLikeTable
 {
 
     @Nullable
