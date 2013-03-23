@@ -16,4 +16,11 @@ public abstract class DbmElement
         this.model = model;
     }
 
+
+    @NotNull
+    protected DbmsBehaviour getDbmsBehaviour()
+    {
+        return model.getDbmsBehaviour();
+    }
+
 }

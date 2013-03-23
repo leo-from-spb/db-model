@@ -10,6 +10,7 @@
     <orderEntry type="module" module-name="DB-Core" />
     <orderEntry type="library" name="jdbc.postgre" level="application" />
     <orderEntry type="library" name="idea.annotations" level="application" />
+    <orderEntry type="library" name="guava" level="application" />
   </component>
 </module>
 

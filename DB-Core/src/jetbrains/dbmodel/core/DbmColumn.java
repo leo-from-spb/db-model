@@ -104,4 +104,39 @@ public class DbmColumn extends DbmObject
     {
         this.defaultExpression = defaultExpression;
     }
+
+    @NotNull
+    public String makeTypeDefinition()
+    {
+        final DbmsBehaviour behaviour = getDbmsBehaviour();
+
+        StringBuilder b = new StringBuilder(60);
+        if (dataType != null) {
+            b.append(dataType);
+            if (size > 0) {
+                b.append('(').append(size);
+                if (scale != 0)
+                    b.append(',').append(scale);
+                if (sizeUnits != SizeUnits.NONE) {
+                    SizeUnits defUnits = behaviour.getDefaultSizeUnits().get(dataType);
+                    if (sizeUnits == defUnits)
+                        b.append(' ').append(sizeUnits.suffix);
+                }
+            b.append(')');
+            }
+        }
+
+        if (defaultExpression != null) {
+            b.append(" (").append(defaultExpression).append(')');
+        }
+
+        if (isMandatory()) {
+            b.append(" not null");
+        }
+
+        if (b.length() > 0 && b.charAt(0) == ' ')
+            b.delete(0, 1);
+
+        return b.toString();
+    }
 }
